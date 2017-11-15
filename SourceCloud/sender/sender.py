@@ -25,24 +25,27 @@ from novaConfig import *
 from glanceConfig import *
 from getConfigurations import *
 
-#logging.basicConfig(filename='/home/controller1/composableMigration/log/sender.log',level=logging.DEBUG)
-#logger = logging.getLogger()
+#Input log directory in filename
+logging.basicConfig(filename=' ',level=logging.DEBUG)
+logger = logging.getLogger()
 
 
 wm = pyinotify.WatchManager()  # Watch Manager
 mask = pyinotify.IN_CLOSE_WRITE | pyinotify.IN_CREATE  # watched events
 
-controllerIP = "172.26.17.151"
-username = "admin"
-password = "2229"
-project_name = "admin"
-user_domain_name = "default"
-project_domain_name = "default"
+#Input following information
+controllerIP = ""
+username = ""
+password = ""
+project_name = ""
+user_domain_name = ""
+project_domain_name = ""
 
-remote_dir = "controller2@172.26.17.153:/home/controller2/images/"
-config_file_path = "/home/controller1/composableMigration/config/configuration.json"
-images_path = "/home/controller1/images/"
-migrationOrder = ["ApplicationServer-4","DBServer-5", "WebServer-1", "ApplicationServer-2","DBServer-2", "ApplicationServer-3", "DBServer-3", "DBServer-1", "DBServer-4", "DBServer-6", "ApplicationServer-1","WebServer-2"]
+remote_dir = ""
+config_file_path = ""
+images_path = ""
+
+migrationOrder = []
 
 
 class EventHandler(pyinotify.ProcessEvent):
@@ -72,7 +75,7 @@ def startMigration(nova, glance, migrationOrder, images_path, remoteDir):
         snapshotId = takeSnapshot(nova, instanceName)
         if snapshotId:
               downloadImage(glance, snapshotId, instanceName, images_path)
-        #time.sleep(10)
+        
         deleteInstance(instanceName)
         image = instanceName+'.raw'
         time.sleep(5)
@@ -93,8 +96,6 @@ if __name__== '__main__':
     neutron = getNeutronClient(controllerIP, username, password, project_name, user_domain_name, project_domain_name)
     glance = getGlanceClient(controllerIP, username, password, project_name, user_domain_name, project_domain_name)
     
-    #startMigration(nova, glance, migrationOrder, images_path, remote_dir)
-
     updateHostConfig(config_file_path, nova, neutron)
     updateNetworkConfig(config_file_path, neutron)
     sendFile(config_file_path, remote_dir)

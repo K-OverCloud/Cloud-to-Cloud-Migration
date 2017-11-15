@@ -1,6 +1,6 @@
 '''
-Created on March 7, 2017
-@author: Jax, Hani
+Created on March 17, 2017
+@author: Jax
 '''
 
 import pyinotify
@@ -22,24 +22,25 @@ from neutronConfig import *
 from novaConfig import *
 from glanceConfig import *
 
-logging.basicConfig(filename='/home/controller2/composableMigration/log/receiver.log',level=logging.DEBUG)
+#Inpute log directory in filename
+logging.basicConfig(filename='',level=logging.DEBUG)
 logger = logging.getLogger()
 
 
 wm = pyinotify.WatchManager()  # Watch Manager
 mask = pyinotify.IN_CLOSE_WRITE | pyinotify.IN_CREATE  # watched events
 
-controllerIP = "172.26.17.153" 
-username = "admin"
-password = "2229"
-project_name = "admin"
-user_domain_name = "default"
-project_domain_name = "default"
+controllerIP = "" 
+username = ""
+password = ""
+project_name = ""
+user_domain_name = ""
+project_domain_name = ""
 
-config_completed_dir = "/home/controller2/images/configurationCompleted"
-remote_dir = "controller1@172.26.17.151:/home/controller1/images"
-configFilePath = "/home/controller2/images/configuration.json"
-imagesPath = "/home/controller2/images/"
+config_completed_dir = ""
+remote_dir = ""
+configFilePath = ""
+imagesPath = ""
 
 class EventHandler(pyinotify.ProcessEvent):
     
