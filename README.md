@@ -9,12 +9,12 @@ This program works in OpenStack based cloud environment, where single OpenStack 
 i) Prerequisite:
    Install followings on both controlled nodes of source and destination clouds 
    1. Install BBCP
-      #apt-get -y install build-essential zlib1g-dev libssl-dev
-      #wget http://www.slac.stanford.edu/~abh/bbcp/bbcp.tgz
-      #tar xvfz bbcp.tgz
-      #cd bbcp/src
-      #make
-      #mv ../bin/*/bbcp /usr/local/bin/
+      # apt-get -y install build-essential zlib1g-dev libssl-dev
+      # wget http://www.slac.stanford.edu/~abh/bbcp/bbcp.tgz
+      # tar xvfz bbcp.tgz
+      # cd bbcp/src
+      # make
+      # mv ../bin/*/bbcp /usr/local/bin/
    2. Install Figlet
       #apt-get -y install figlet
   3. Set SSH login without password between the controller nodes
