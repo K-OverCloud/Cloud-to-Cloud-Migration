@@ -16,8 +16,9 @@ i) Prerequisite:
       # make
       # mv ../bin/*/bbcp /usr/local/bin/
    2. Install Figlet
-      #apt-get -y install figlet
+   # apt-get install figlet
+     
   3. Set SSH login without password between the controller nodes
-
+  #
        
       
