@@ -8,7 +8,7 @@ The program works in OpenStack based cloud environment, where single OpenStack b
 * Ubuntu Operating System 16.04.01 LTS
 * OpenStack Ocata release
 
-### Prerequists: ###
+### Prerequisites: ###
 * Two OpenStack based cloud environment, each cloud consists of contoller and compute nodes 
   * Source cloud for sending VMs
   * Destination cloud for receiving VMs
