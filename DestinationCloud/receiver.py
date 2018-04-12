@@ -26,9 +26,9 @@ logger = logging.getLogger()
 wm = pyinotify.WatchManager()  
 mask = pyinotify.IN_CLOSE_WRITE | pyinotify.IN_CREATE  
 
-#Input shared location at SourceCloud
-#remote_dir = input('Enter shared directory at source cloud: ')
-remote_dir = "controller1@172.26.17.151:/home/controller1/Cloud-to-Cloud-Migration/SourceCloud/shared/"
+#****************************INPUT***********************************
+remote_dir = input('Enter shared directory at source cloud: ')
+#remote_dir = "controller1@172.26.17.151:/home/controller1/Cloud-to-Cloud-Migration/SourceCloud/shared/"
 
 #Source cloud information
 auth_url = environ['OS_AUTH_URL']
