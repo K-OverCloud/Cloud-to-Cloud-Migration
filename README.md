@@ -10,8 +10,8 @@ The program works in OpenStack based cloud environment, where single OpenStack b
 
 ### Prerequists: ###
 * Two OpenStack based cloud environment, each cloud consists of contoller and compute nodes 
-* * Source cloud for sending VMs
-* * Destination cloud for receiving VMs
+  * Source cloud for sending VMs
+  * Destination cloud for receiving VMs
 * Install figlet   (# apt-get install figlet)
 * Download Cloud-to-Cloud-Migration folder on the contreller nodes of both  source and destination clouds
 * On the source cloud, move to Cloud-to-Cloud-Migration/SourceCloud/ directory
