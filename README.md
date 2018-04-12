@@ -8,8 +8,8 @@ The program works in OpenStack based cloud environment, where single OpenStack b
 * Ubuntu Operating System 16.04.01 LTS
 * OpenStack Ocata release
 
-##Prerequists:
-* Install figlet   # apt-get install figlet
+### Prerequists: ###
+* Install figlet   (# apt-get install figlet)
 * Donwload Cloud-to-Cloud-Migration folder on both  contreller nodes of source and destination clouds
 * On the source cloud, move to Cloud-to-Cloud-Migration/SourceCloud/ directory
 * On the destination cloud, move to Cloud-to-Cloud-Migration/DestinationCloud/ directory
