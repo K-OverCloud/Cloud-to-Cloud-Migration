@@ -9,8 +9,11 @@ The program works in OpenStack based cloud environment, where single OpenStack b
 * OpenStack Ocata release
 
 ### Prerequists: ###
+* Two OpenStack based cloud environment, each cloud consists of contoller and compute nodes 
+* * Source cloud for sending VMs
+* * Destination cloud for receiving VMs
 * Install figlet   (# apt-get install figlet)
-* Donwload Cloud-to-Cloud-Migration folder on both  contreller nodes of source and destination clouds
+* Download Cloud-to-Cloud-Migration folder on the contreller nodes of both  source and destination clouds
 * On the source cloud, move to Cloud-to-Cloud-Migration/SourceCloud/ directory
 * On the destination cloud, move to Cloud-to-Cloud-Migration/DestinationCloud/ directory
 
