@@ -4,7 +4,11 @@ from novaclient import client as novClient
 from neutronclient.v2_0 import client as neutClient
 from glanceclient import Client as glanceClient
 from glanceclient.common import utils as utilsGlance
+<<<<<<< HEAD
 import os
+=======
+
+>>>>>>> 20d128af4b6809f5a311e57da1a2b8835663a8dd
 
 
 def uploadImage(glance, imageName, path):
@@ -27,11 +31,17 @@ def downloadImage(glance, snapshotId, imageName, path):
 			notActive = False
 	print "Snapshot created\n"
 
+<<<<<<< HEAD
 	print "Downloading snapshot, id: %s" %(snapshotId)
         #d = glance.images.data(snapshotId) 
         os.system("glance image-download --file "+path+imageName+".raw "+snapshotId)
         print "completed check point"
         #utilsGlance.save_image(d, path+imageName+'.raw')
+=======
+	print "Download snapshot of the instance %s" %(snapshotId)
+        d = glance.images.data(snapshotId) 
+        utilsGlance.save_image(d, path+imageName+'.raw' )
+>>>>>>> 20d128af4b6809f5a311e57da1a2b8835663a8dd
         print "Completed to download image\n"
     except Exception as e:
         #print(str(e))

@@ -4,7 +4,11 @@ from novaclient import client as novClient
 from neutronclient.v2_0 import client as neutClient
 import os
 
+<<<<<<< HEAD
 def createInstance(novaClient, name, network, flavor):
+=======
+def createInstance(novaClient, name, network):
+>>>>>>> 20d128af4b6809f5a311e57da1a2b8835663a8dd
    try:
         notActive = True
         while notActive:
@@ -15,7 +19,17 @@ def createInstance(novaClient, name, network, flavor):
 
         print "Create instance : %s" %(name)
         image = novaClient.images.find(name=name)
+<<<<<<< HEAD
         flavor = novaClient.flavors.find(name=flavor)
+=======
+        """
+        if name[0] == 'B':
+             flavor = novaClient.flavors.find(name="m1.test")
+        else:
+             flavor = novaClient.flavors.find(name="m1.test")
+        """
+        flavor = novaClient.flavors.find(name="m1.tiny")
+>>>>>>> 20d128af4b6809f5a311e57da1a2b8835663a8dd
         net = novaClient.networks.find(label=network)
         nics = [{'net-id': net.id}]
         instance = novaClient.servers.create(name=name, image=image, flavor=flavor, nics=nics)

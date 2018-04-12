@@ -1,0 +1,8 @@
+1. Create directory named "images" on both controllers of source and destination clouds
+2. Create following files in images directory 
+   "images" on controller of source cloud:
+         a) configuration.json
+         b) completed
+   images on controller of destination cloud:
+         a) configurationCompleted
+

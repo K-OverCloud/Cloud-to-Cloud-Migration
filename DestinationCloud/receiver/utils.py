@@ -42,6 +42,7 @@ def getNameToNetwork(file_path):
     
     return nameToNetworkInfo
 
+<<<<<<< HEAD
 def getInstanceData(instance_name, file_path):
     instances = getInstanceInfo(file_path)
     for instance in instances:
@@ -49,6 +50,8 @@ def getInstanceData(instance_name, file_path):
             return instance
 
 
+=======
+>>>>>>> 20d128af4b6809f5a311e57da1a2b8835663a8dd
 def getFloatingipInfo(file_path):
     data = config_json_read(file_path)
     floatingipInfo = data["FloatingIPs"]
