@@ -19,20 +19,20 @@ The program works in OpenStack based cloud environment. It enables automated vir
 
 ### User guide: ###
 1. Download Cloud-to-Cloud-Migration folder on the contreller nodes of both  source and destination clouds
-  - On the source cloud, move to Cloud-to-Cloud-Migration/SourceCloud/ directory
-  - On the destination cloud, move to Cloud-to-Cloud-Migration/DestinationCloud/ directory
+   - On the source cloud, move to Cloud-to-Cloud-Migration/SourceCloud/ directory
+   - On the destination cloud, move to Cloud-to-Cloud-Migration/DestinationCloud/ directory
 2. Set owner of shared folders as users of sender and receiver
-  - On the source cloud: #chown username:username -R ~/Cloud-to-Cloud-Migration/SourceCloud/shared/
-  - On the destination cloud: #chown username:username -R ~/Cloud-to-Cloud-Migration/DestinationCloud/shared/
+   - On the source cloud: #chown username:username -R ~/Cloud-to-Cloud-Migration/SourceCloud/shared/
+   - On the destination cloud: #chown username:username -R ~/Cloud-to-Cloud-Migration/DestinationCloud/shared/
 3. Execute sender.py and receiver.py scripts on the source and destination clouds, respectively
-  - On the source cloud: #python sender.py
-  - On the destination cloud: #python receiver.py
+   - On the source cloud: #python sender.py
+   - On the destination cloud: #python receiver.py
 4. sender.py execution requires following inputs:
-  > Enter shared directory at destination cloud: "destinationUser@Destination_cloud_IP:/home/destinationUser/Cloud-to-Cloud-Migration/DestinationCloud/shared/"
-  > Enter external gateway IP for destination cloud: "172.26.17.137" 
-  > Enter VM migration order in list: ["VM1", "VM2", "VM3"]
+   - Enter shared directory at destination cloud: "destinationUser@Destination_cloud_IP:/home/destinationUser/Cloud-to-Cloud-Migration/DestinationCloud/shared/"
+   - Enter external gateway IP for destination cloud: "172.26.17.137" 
+   - Enter VM migration order in list: ["VM1", "VM2", "VM3"]
 5. receiver.py execution requires following inputs:
-  > Enter shared directory at source cloud: "sourceUser@Source_cloud_IP:/home/sourceUser/Cloud-to-Cloud-Migration/SourceCloud/shared/"
+   - Enter shared directory at source cloud: "sourceUser@Source_cloud_IP:/home/sourceUser/Cloud-to-Cloud-Migration/SourceCloud/shared/"
 
 
 
