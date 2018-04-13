@@ -31,5 +31,8 @@ The program works in OpenStack based cloud environment. It enables automated vir
    - Enter external gateway IP for destination cloud: "IP for external network gateway" 
    - Enter VM migration order: ["VM1", "VM2", "VM3"]
  
-
+ >  For re-using the migration tool, do following:
+ >  1. On the destination, delete **configurations.json**, **completed**, and **all image files files** in /Cloud-to-Cloud-Migration/DestinationCloud/shared/ folder
+ >  2. On the source, delete **configurationCompleted**, and **all image files files** in /Cloud-to-Cloud-Migration/SourceCloud/shared/ folder
+ >  3. Remove all network configurations, instances, and images on the destination cloud 
 
