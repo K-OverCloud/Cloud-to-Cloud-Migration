@@ -63,4 +63,3 @@ def addFloatingIP(nova, instanceName, floatingIP):
         print "Floating ip allocated : %s %s" %(instanceName, floatingIP)
     except Exception as e:
         print str(e)
-

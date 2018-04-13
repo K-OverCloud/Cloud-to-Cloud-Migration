@@ -38,7 +38,6 @@ def updateNetworkConfig(file_path, neutronClient):
                     if subnet['id'] ==  external_fixed_ip['subnet_id']:
                                #fixed_ip = {"ip_address":external_fixed_ip["ip_address"], "subnet_name":subnet['name']}
                                fixed_ip = {"ip_address":remote_gateway, "subnet_name":subnet['name']}
-                               fixed_ip = {"ip_address":external_fixed_ip["ip_address"], "subnet_name":subnet['name']}
                                external_fixed_ips.append(fixed_ip)     
          
          external_gateway_info = {"network":networkName, "enable_snat":enable_snat, "external_fixed_ips":external_fixed_ips}

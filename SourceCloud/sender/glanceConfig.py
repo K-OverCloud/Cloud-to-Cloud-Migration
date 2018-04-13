@@ -29,11 +29,7 @@ def downloadImage(glance, snapshotId, imageName, path):
 	print "Downloading snapshot, id: %s" %(snapshotId)
         #d = glance.images.data(snapshotId) 
         os.system("glance image-download --file "+path+imageName+".raw "+snapshotId)
-        print "completed check point"
         #utilsGlance.save_image(d, path+imageName+'.raw')
-	print "Download snapshot of the instance %s" %(snapshotId)
-        d = glance.images.data(snapshotId) 
-        utilsGlance.save_image(d, path+imageName+'.raw' )
         print "Completed to download image\n"
     except Exception as e:
         #print(str(e))
@@ -46,5 +42,3 @@ def deleteImage(glance, snapshotId):
         print "Image Deleted\n"
     except Exception as e:
         print str(e)
-
-

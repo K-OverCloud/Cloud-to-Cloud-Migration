@@ -73,6 +73,3 @@ def config_json_read(file_path):
               return None
 
     return json_data
-
-
-

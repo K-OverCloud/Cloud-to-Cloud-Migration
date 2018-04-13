@@ -25,6 +25,5 @@ def createRouter(neutronClient, name, network_id, enable_snat, ip_address, subne
     return router
 
 def connectSubnetToRouter(neutronClient, router_id, subnet_id):
-    
     neutronClient.add_interface_router(router_id, {"subnet_id": subnet_id})
 
