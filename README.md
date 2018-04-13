@@ -8,7 +8,7 @@ The program works in OpenStack based cloud environment. It enables automated vir
 * OpenStack Ocata release
 
 ### Prerequisites: ###
-1. Two OpenStack based clouds 
+1. Two OpenStack based clouds (Source and Destination clouds)
 2. Install figlet and git on controller nodes  (# apt-get install figlet, git)
 3. Set SSH connection without password between the controller nodes
 4. Flavor name, and its related resources should be exactly same on both source and destination clouds
