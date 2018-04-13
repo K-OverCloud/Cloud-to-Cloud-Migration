@@ -23,11 +23,11 @@ The program works in OpenStack based cloud environment. It enables automated vir
   * On the source cloud, move to Cloud-to-Cloud-Migration/SourceCloud/ directory
   * On the destination cloud, move to Cloud-to-Cloud-Migration/DestinationCloud/ directory
 2. Set owner of shared folders on both source and destination clouds
-  * # chown username:username -R ~/Cloud-to-Cloud-Migration/SourceCloud/shared/
-  * # chown username:username -R ~/Cloud-to-Cloud-Migration/DestinationCloud/shared/
+  * On the source cloud: #chown username:username -R ~/Cloud-to-Cloud-Migration/SourceCloud/shared/
+  * On the destination cloud: #chown username:username -R ~/Cloud-to-Cloud-Migration/DestinationCloud/shared/
 3. Execute sender.py and receiver.py scripts on the source and destination clouds, respectively
-  * On the source cloud: # python sender.py
-  * On the destination cloud: # python receiver.py
+  * On the source cloud: #python sender.py
+  * On the destination cloud: #python receiver.py
 
 
 
