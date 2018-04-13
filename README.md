@@ -1,7 +1,6 @@
 # Cloud-to-Cloud Migration 
-## Summary ##
-### Overview ###
 
+## Overview ##
 The program works in OpenStack based cloud environment. It enables automated virtual machine migration between two different Openstack based cloud environments.
 
 ### Current Support ###
