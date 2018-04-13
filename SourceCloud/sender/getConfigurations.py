@@ -1,10 +1,6 @@
 from utils import *
 
-<<<<<<< HEAD
-def updateNetworkConfig(file_path, neutronClient, remote_gateway):
-=======
 def updateNetworkConfig(file_path, neutronClient):
->>>>>>> 20d128af4b6809f5a311e57da1a2b8835663a8dd
     networks = neutronClient.list_networks()['networks']
     subnets = neutronClient.list_subnets()['subnets']
     routers = neutronClient.list_routers()['routers']
@@ -40,12 +36,9 @@ def updateNetworkConfig(file_path, neutronClient):
                 
                 for subnet in subnets:
                     if subnet['id'] ==  external_fixed_ip['subnet_id']:
-<<<<<<< HEAD
                                #fixed_ip = {"ip_address":external_fixed_ip["ip_address"], "subnet_name":subnet['name']}
                                fixed_ip = {"ip_address":remote_gateway, "subnet_name":subnet['name']}
-=======
                                fixed_ip = {"ip_address":external_fixed_ip["ip_address"], "subnet_name":subnet['name']}
->>>>>>> 20d128af4b6809f5a311e57da1a2b8835663a8dd
                                external_fixed_ips.append(fixed_ip)     
          
          external_gateway_info = {"network":networkName, "enable_snat":enable_snat, "external_fixed_ips":external_fixed_ips}
@@ -64,7 +57,6 @@ def updateNetworkConfig(file_path, neutronClient):
     data['FloatingIPs'] = floatingIPList 
     config_json_write(file_path, data)
 
-<<<<<<< HEAD
 def updateHostConfig(file_path, novaClient):
     instanceList = novaClient.servers.list()
     flavors = novaClient.flavors.list()
@@ -88,29 +80,3 @@ def updateHostConfig(file_path, novaClient):
     data = config_json_read(file_path)
     data['VMs'] = VMs
     config_json_write(file_path, data)
-=======
-def updateHostConfig(file_path, novaClient, neutronClient):
-    instanceList = novaClient.servers.list()
-    subnets = neutronClient.list_subnets()['subnets']
-    VMs = [] 
-    for instance in instanceList:
-          for subnet in instance.addresses['Subnet']:
-               if subnet['OS-EXT-IPS:type'] == 'fixed':
-                         fixedIP = subnet["addr"]
-                         for snet in subnets:
-                                   cidr = snet['cidr']
-                                   saddr = cidr.split(".")
-                                   fsub = fixedIP.split(".")
-                                   if saddr[:3] == fsub[:3]:
-                                            snetName = snet['name']
-               elif subnet['OS-EXT-IPS:type'] == 'floating':
-                         floatingIP = subnet["addr"]            
-          
-          vm = {'name': instance.name, 'Subnet': snetName, 'FloatingIP':floatingIP}
-          VMs.append(vm)
-
-    data = config_json_read(file_path)
-    data['VMs'] = VMs
-    config_json_write(file_path, data)
-
->>>>>>> 20d128af4b6809f5a311e57da1a2b8835663a8dd

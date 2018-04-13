@@ -36,10 +36,7 @@ def stopInstance(nova, instanceName):
 def deleteInstance(nova, instanceName):
     try:
 	instance = nova.servers.find(name=instanceName)
-<<<<<<< HEAD
         print instance
-=======
->>>>>>> 20d128af4b6809f5a311e57da1a2b8835663a8dd
 	instance.delete()
 	print "Instance deleted : %s\n" %(instanceName)
     except Exception as e:
