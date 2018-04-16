@@ -1,6 +1,6 @@
 from utils import *
 
-def updateNetworkConfig(file_path, neutronClient):
+def updateNetworkConfig(file_path, neutronClient, remote_gateway):
     networks = neutronClient.list_networks()['networks']
     subnets = neutronClient.list_subnets()['subnets']
     routers = neutronClient.list_routers()['routers']
