@@ -30,6 +30,7 @@ The program works in OpenStack based cloud environment. It enables automated vir
    - Enter shared directory at destination cloud: "destinationUser@DestinationIP:/home/destinationUser/Cloud-to-Cloud-Migration/DestinationCloud/shared/"
    - Enter external gateway IP for destination cloud: "IP for external network gateway" 
    - Enter VM migration order: ["VM1", "VM2", "VM3"]
+   > For convenience, you can set the inputs manually as sample input in sender.py file
  
  >  For re-using the migration tool, do following:
  >  1. On the destination, delete **configurations.json**, **completed**, and **all image files** in /Cloud-to-Cloud-Migration/DestinationCloud/shared/ folder
