@@ -39,3 +39,5 @@ The program works in OpenStack based cloud environment. It enables automated vir
  >  2. On the source, delete **configurationCompleted**, and **all image files** in /Cloud-to-Cloud-Migration/SourceCloud/shared/ folder
  >  3. Remove all network configurations, instances, and images on the destination cloud 
 
+## Flow Diagram
+![Alt Text](https://raw.githubusercontent.com/K-OverCloud/Cloud-to-Cloud-Migration/master/FlowDiagram.png)
