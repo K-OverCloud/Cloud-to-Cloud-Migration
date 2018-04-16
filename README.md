@@ -25,7 +25,9 @@ The program works in OpenStack based cloud environment. It enables automated vir
    - On the source cloud: #chown username:username -R ~/Cloud-to-Cloud-Migration/SourceCloud/shared/
    - On the destination cloud: #chown username:username -R ~/Cloud-to-Cloud-Migration/DestinationCloud/shared/
 6. Execute receiver.py on the destination cloud ($ python receiver.py)
-   - Enter shared directory at source cloud: "sourceUser@SourceIP:/home/sourceUser/Cloud-to-Cloud-Migration/SourceCloud/shared/"
+   - Enter shared directory at source cloud: "sourceUser@SourceIP:/home/sourceUser/Cloud-to-Cloud-Migration/SourceCloud/shared/"  
+   > For convenience, you can set the input manually as sample input in receiver.py file
+ 
 7. Execute sender.py on the source cloud ($ python sender.py)
    - Enter shared directory at destination cloud: "destinationUser@DestinationIP:/home/destinationUser/Cloud-to-Cloud-Migration/DestinationCloud/shared/"
    - Enter external gateway IP for destination cloud: "IP for external network gateway" 
