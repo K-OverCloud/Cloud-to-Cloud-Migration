@@ -17,7 +17,6 @@ Cloud Migration
    - It is required for step 7 of user guide
 
 Dependency analysis
-
 ```
   $ apt-get
   $ pip install -U scikit-learn
@@ -26,6 +25,13 @@ Dependency analysis
 ```
 
 ### User guide: ###
+Dependency Analysis
+```
+$ cd /Cloud-to-Cloud-Migration/Dependency_Analysis/
+$ python findLocation.py
+
+```
+Cloud Migration
 1. Load *admin-openrc* file for Openstack identification on both source and destination clouds
 2. Download Cloud-to-Cloud-Migration folder on the contreller nodes of both source and destination clouds 
    - git clone https://github.com/K-OverCloud/Cloud-to-Cloud-Migration.git
@@ -51,3 +57,5 @@ Dependency analysis
 
 ## Flow Diagram
 ![Alt Text](https://raw.githubusercontent.com/K-OverCloud/Cloud-to-Cloud-Migration/master/FlowDiagram.png)
+
+
