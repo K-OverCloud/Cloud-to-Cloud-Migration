@@ -18,12 +18,12 @@ Cloud Migration
 
 Dependency analysis
 
-''' 
+```
   $ apt-get
   $ pip install -U scikit-learn
   $ pip intall numpy 
   $ pip install matplotlib  
-'''
+```
 
 ### User guide: ###
 1. Load *admin-openrc* file for Openstack identification on both source and destination clouds
