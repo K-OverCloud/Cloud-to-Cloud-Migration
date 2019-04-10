@@ -1,7 +1,7 @@
 # Cloud-to-Cloud Migration 
 
 ## Overview ##
-The program works in OpenStack based cloud environment. It enables automated virtual machine migration between two different Openstack based cloud environments. Also it analyzes communication dependency between the VMs. 
+The program works in OpenStack based cloud environment. It enables automated virtual machine migration between two different Openstack based cloud environments. Also it analyzes communication dependencies of the VMs in the cloud and decides migration order of the VMs in order to reduce service downtime. 
 
 ### Current Support ###
 * Ubuntu Operating System 16.04.01 LTS
