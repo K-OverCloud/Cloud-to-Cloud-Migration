@@ -24,7 +24,10 @@ The program works in OpenStack based cloud environment. It enables automated vir
 
 ### User guide: ###
 Running cloud migrator
-1. Load *admin-openrc* file for Openstack identification on both source and destination clouds
+1. Load *admin-openrc.sh* file for Openstack identification on both source and destination clouds
+   ```
+   $ source admin-openrc.sh
+   ```
 2. Download Cloud-to-Cloud-Migration folder on the contreller nodes of both source and destination clouds 
    ```
    $ git clone https://github.com/K-OverCloud/Cloud-to-Cloud-Migration.git
