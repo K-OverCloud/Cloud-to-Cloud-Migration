@@ -10,7 +10,7 @@ The program works in OpenStack based cloud environment. It enables automated vir
 ### Prerequisites: ###
 Dependency analysis
 ```
-  $ apt-get
+  $ apt-get install python-pip
   $ pip install -U scikit-learn
   $ pip intall numpy 
   $ pip install matplotlib  
@@ -18,7 +18,10 @@ Dependency analysis
 
 Cloud Migration
 1. Two OpenStack based clouds (Source and Destination clouds)
-2. Install figlet and git on controller nodes  (# apt-get install figlet, git)
+2. Install figlet and git on controller nodes  
+```
+  # apt-get install figlet, git
+```
 3. Set SSH connection without password between the controller nodes
 4. Flavor name, and its related resources should be exactly same on both source and destination clouds
 5. Additinional IP address for setting external network gateway on destination cloud 
