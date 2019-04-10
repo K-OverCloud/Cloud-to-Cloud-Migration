@@ -23,12 +23,6 @@ The program works in OpenStack based cloud environment. It enables automated vir
    - It is required for step 7 of user guide
 
 ### User guide: ###
-Running dependency analyzer
-```
-$ cd /Cloud-to-Cloud-Migration/Dependency_Analysis/
-$ python findLocation.py
-
-```
 Running cloud migrator
 1. Load *admin-openrc* file for Openstack identification on both source and destination clouds
 2. Download Cloud-to-Cloud-Migration folder on the contreller nodes of both source and destination clouds 
@@ -53,6 +47,12 @@ Running cloud migrator
  >  2. On the source, delete **configurationCompleted**, and **all image files** in /Cloud-to-Cloud-Migration/SourceCloud/shared/ folder
  >  3. Remove all network configurations, instances, and images on the destination cloud 
 
+Running dependency analyzer
+```
+$ cd /Cloud-to-Cloud-Migration/Dependency_Analysis/
+$ python findLocation.py
+
+```
 ## Flow Diagram
 ![Alt Text](https://raw.githubusercontent.com/K-OverCloud/Cloud-to-Cloud-Migration/master/FlowDiagram.png)
 
