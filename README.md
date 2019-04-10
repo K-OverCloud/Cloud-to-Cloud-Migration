@@ -8,19 +8,14 @@ The program works in OpenStack based cloud environment. It enables automated vir
 * OpenStack Ocata release
 
 ### Prerequisites: ###
-Dependency analysis
-```
-  $ apt-get install python-pip
-  $ pip install -U scikit-learn
-  $ pip intall numpy 
-  $ pip install matplotlib  
-```
-
-Cloud Migration
 1. Two OpenStack based clouds (Source and Destination clouds)
-2. Install figlet and git on controller nodes  
+2. Install followings 
 ```
   # apt-get install figlet, git
+  # apt-get install python-pip
+  # pip install -U scikit-learn
+  # pip intall numpy 
+  # pip install matplotlib  
 ```
 3. Set SSH connection without password between the controller nodes
 4. Flavor name, and its related resources should be exactly same on both source and destination clouds
@@ -28,13 +23,13 @@ Cloud Migration
    - It is required for step 7 of user guide
 
 ### User guide: ###
-Dependency Analysis
+Running dependency analyzer
 ```
 $ cd /Cloud-to-Cloud-Migration/Dependency_Analysis/
 $ python findLocation.py
 
 ```
-Cloud Migration
+Running cloud migrator
 1. Load *admin-openrc* file for Openstack identification on both source and destination clouds
 2. Download Cloud-to-Cloud-Migration folder on the contreller nodes of both source and destination clouds 
    - git clone https://github.com/K-OverCloud/Cloud-to-Cloud-Migration.git
