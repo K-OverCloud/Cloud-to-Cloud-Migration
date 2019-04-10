@@ -23,7 +23,7 @@ The program works in OpenStack based cloud environment. It enables automated vir
    - It is required for step 7 of user guide
 
 ### User guide: ###
-Running cloud migrator
+#### Running cloud migrator
 1. Load *admin-openrc.sh* file for Openstack identification on both source and destination clouds
    ```
    $ source admin-openrc.sh
@@ -64,7 +64,7 @@ Running cloud migrator
  >  2. On the source, delete **configurationCompleted**, and **all image files** in /Cloud-to-Cloud-Migration/SourceCloud/shared/ folder
  >  3. Remove all network configurations, instances, and images on the destination cloud 
 
-Running dependency analyzer
+#### Running dependency analyzer
 ```
 $ cd /Cloud-to-Cloud-Migration/Dependency_Analysis/
 $ python findLocation.py
